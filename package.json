@@ -1,0 +1,37 @@
+{
+  "name": "wrt",
+  "version": "1.0.0",
+  "description": "Web Recon Toolkit - Fast OSINT & reconnaissance for penetration testers",
+  "main": "src/commands/scan.js",
+  "bin": {
+    "wrt": "./bin/wrt.js"
+  },
+  "scripts": {
+    "start": "node bin/wrt.js",
+    "test": "node test.js",
+    "build": "pkg . --targets latest-win,latest-linux,latest-macos --output wrt"
+  },
+  "keywords": [
+    "osint",
+    "reconnaissance",
+    "penetration-testing",
+    "security",
+    "recon",
+    "cli"
+  ],
+  "author": "Digitalowl",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "table": "^6.8.1",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
