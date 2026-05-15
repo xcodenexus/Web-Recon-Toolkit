@@ -1,4 +1,8 @@
-const dns = require('dns').promises;
+const dnsModule = require('dns');
+const dns = dnsModule.promises;
+
+// Force public DNS resolvers — avoids ECONNREFUSED on machines with local resolver issues
+dnsModule.setServers(['8.8.8.8', '1.1.1.1', '8.8.4.4']);
 
 async function getDNSRecords(domain) {
   const records = {
